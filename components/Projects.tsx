@@ -40,9 +40,9 @@ export default function Projects({}: Props) {
             />
             <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
               <h4 className='text-lg font-semibold text-center md:text-4xl'>
-                <span className=' underline decoration-[#F7AB0A]'>
+                {/* <span className=' underline decoration-[#F7AB0A]'>
                   Case Study {index + 1} 0f {projects.length}:
-                </span>{' '}
+                </span>{' '} */}
                 UPS clone
               </h4>
               <p className='text-lg text-center md:text-left'>

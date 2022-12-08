@@ -1,4 +1,4 @@
-import { GetStaticProps, NextPage } from 'next';
+import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
 import Header from '../components/Header';
@@ -24,7 +24,7 @@ type Props = {
   socials: Social[];
 };
 
-const Home = ({ pageInfo, experiences, projects, socials, skills }: Props) => {
+const Home = ({ pageInfo, experiences, socials, skills }: Props) => {
   return (
     <div className='bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-thumb-[#F7AB0A]/80 scrollbar-track-gray-400/20'>
       <Head>
@@ -64,8 +64,6 @@ const Home = ({ pageInfo, experiences, projects, socials, skills }: Props) => {
           </div>
         </footer>
       </Link>
-
-      {/* tsrfc */}
     </div>
   );
 };
@@ -86,7 +84,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       projects,
       socials,
     },
-    fallback: true,
+    // fallback: true,
     // Next.js will attempt to re-generate the page:
     // - When a request comes in
     // - At most once every 10 seconds
