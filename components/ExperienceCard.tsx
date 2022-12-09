@@ -20,24 +20,24 @@ export default function ExperienceCard({ experience }: Props) {
         alt=''
       />
       <div className='px-0 md:px-10'>
-        <h4 className=' text-4xl font-light'>{experience?.jobTitle}</h4>
-        <p className='font-bold text-2xl mt-1'>{experience?.company}</p>
+        <h4 className='font-bold text-xl'>{experience?.jobTitle}</h4>
+        <p className=' text-base mt-1'>{experience?.company}</p>
 
-        <div className='flex space-x-2 my-2'>
+        {/* <div className='flex space-x-2 my-2'>
           <img
             className='h-10 w-10 rounded-full'
             src='https://images.unsplash.com/photo-1519436893050-4b29535906c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=100&q=80'
             alt=''
           />
-        </div>
-        <p className='uppercase py-5 text-gray-300'>
+        </div> */}
+        <p className='uppercase py-5 text-gray-300 text-sm'>
           {experience?.dateStarted &&
             `Started work ${new Date(
               experience?.dateStarted
             ).toDateString()}`}{' '}
           {experience?.dateEnd && `Ended ${experience?.dateEnd}`}
         </p>
-        <div>
+        <div className='flex gap-1'>
           {experience.technologies &&
             experience?.technologies.map((technology) => (
               <img
@@ -49,11 +49,11 @@ export default function ExperienceCard({ experience }: Props) {
               />
             ))}
         </div>
-        <ul className=' list-disc space-y-4 ml-5 text-lg'>
-          {experience?.points.map((point, index) => (
+        {/* <ul className=' list-disc space-y-4 ml-5 text-lg'>
+          {experience?.points?.map((point, index) => (
             <li key={index}>{point}</li>
           ))}
-        </ul>
+        </ul> */}
       </div>
     </article>
   );

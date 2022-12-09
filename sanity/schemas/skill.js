@@ -25,4 +25,11 @@ export default {
       },
     },
   ],
+  // orderings: [
+  //   {
+  //     title: 'title',
+  //     name: 'Title',
+  //     by: [{ field: 'title', direction: 'desc' }],
+  //   },
+  // ],
 };
